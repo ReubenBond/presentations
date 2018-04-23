@@ -1,0 +1,39 @@
+Essence of Service Fabric
+
+Service Fabric is the distributed systems platform at the core of DocumentDB, Service Bus, Cortana, and many other cloud services. Looking at the feature list, you see a smorgasbord, including Virtual Actors, Reliable Services, and Stateless Services among many others. The message can be confusing. What is Service Fabric at its core? How do these pieces fit together?
+I will describe Service Fabric from the ground-up and explain the motivation behind each component, helping you to understand why this is such a powerful tool in your arsenal.
+
+PROBLEM STATEMENT
+	We need to run a wide array of services: Web, Business Logic, Search, Databases, Analytics, Monitoring...
+	We need to be able to make changes quickly and monitor our deployed environments.
+	We want to split our monolithic services up into many smaller "microservices" and deploy/manage/scale those independently of each other.
+
+	Most services need some kind of state which changes over time.
+	Traditionally we use that familiar 3-tier model: Web, Business, Database.
+	Then you add a cache in there to make things performant again, because your Web & Business tier are calling into your database.
+	Now you have to deal with cache invalidation, which is Hard with a capital 'H':
+		"There are 2 hard problems in computer science, naming things and cache invalidation" - whoever.
+	Then you add a queue in there to make things reliable and keep everything working in synchrony.
+		So you've got workers serializing through
+
+Why is that hard?
+	Docker doesn't do state...
+	Nothing does state....
+	Well, almost nothing.
+
+
+	Nothing except for Service Fabric.
+
+
+* The State of Distributed Systems
+	
+
+As with all tech, we wax poetic before they become real. "Cloud" was one of them.
+Until recently, cloud services were the same as any other service except they ran on more machines which you had less control over.
+Then came Docker and hype peaked up again. Containerization is the enabling technology behind globalization for the global supply chain, maybe the same trick will let us bundle our messy code into manageable bits which we can ship anywhere.
+
+Now, Docker is great. But what's one of the biggest shortcomings of Docker? ... It doesn't talk about state.
+Functional Programming afficionados and Web frontend afficionados will tell you how great stateless things are.
+And they are great. Stateless services are ridiculously easy to scale and manage. There are so many tools which leverage docker to provide stateless service hosting. They let you push and upgrade services and keep them highly available. All good things.
+
+Problem is, state is real. Eventually you need state. Most of those Web & FP people aren't arguing against that - they just want state contained and pushed into something they themselves don't have to deal with. Because state is HARD: State has to be replicated & consistent so that it's reliable. 
