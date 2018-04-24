@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynCodeGenerator", "Rosl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionTreeGen", "ExpressionTreeGen\ExpressionTreeGen.csproj", "{6166F911-DCD0-4F83-847A-E8DEBB2BC9E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmitIL", "..\EmitIL\EmitIL.csproj", "{68D2DE73-A606-4C0E-A9D0-BD9D9CCB40E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6166F911-DCD0-4F83-847A-E8DEBB2BC9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6166F911-DCD0-4F83-847A-E8DEBB2BC9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6166F911-DCD0-4F83-847A-E8DEBB2BC9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D2DE73-A606-4C0E-A9D0-BD9D9CCB40E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D2DE73-A606-4C0E-A9D0-BD9D9CCB40E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D2DE73-A606-4C0E-A9D0-BD9D9CCB40E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D2DE73-A606-4C0E-A9D0-BD9D9CCB40E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
